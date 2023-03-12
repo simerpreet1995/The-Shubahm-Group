@@ -1,0 +1,29 @@
+
+.about{
+    word-spacing: 6px;
+    line-height: 2;
+    margin: 1em;
+    padding: 1em;
+    word-spacing: 3px;
+    /* text-align: center; */
+}
+
+.about-box{
+    text-align: center;
+    margin-top: 3.5em;
+    color: rgb(56, 54, 53);
+    text-decoration: underline;
+}
+
+.company-name{
+    color: rgb(76, 73, 70);
+    font-size: 1.5em;
+}
+
+
+
+
+.box-typography{
+    margin: 1em;
+    padding: 0.5em;
+}
