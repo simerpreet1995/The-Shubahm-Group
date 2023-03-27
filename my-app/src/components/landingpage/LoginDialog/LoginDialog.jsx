@@ -5,9 +5,10 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
 const Component = styled(Box)`
-    height: 70vh;
+    height: 75vh;
     widhth: 90vw;
     border: 5px solid #ccc;
+
 
 `
 
@@ -21,6 +22,10 @@ const Image = styled(Box)`
     & p {
         padding: 1rem 0;
     }
+
+    @media (max-width: 600px){
+        display: none;
+    }
 `
 
 const Wrapper = styled(Box)`
@@ -32,19 +37,28 @@ const Wrapper = styled(Box)`
     width: 60%;
 
     & div {
-        margin-bottom: 7px;
+        margin-bottom: 5px;
     }
+
+    @media (max-width: 600px){
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
 `
 
 const Calling = styled(Box)`
     // text-align: center;
-    margin-top: 2rem;
    
     & a{
         text-decoration: none;
         color: green;
 
     }
+
 `
 
 const CloseButtonWrapper = styled(Box)`
@@ -91,17 +105,24 @@ function LoginDialog({open, setOpen}) {
           id="outlined-multiline-static"
           label="Comments... "
           multiline
-          rows={6}
+          rows={4}
           placeholder="Write you query here"
         />
       </div>
 
       </Box>
+
+            <Box 
+            sx={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", marginTop: "1rem"}}
+            >
+
                 <Button style={{background: "rgb(150, 60, 60)" , width: 30}} variant='contained'>Submit</Button>
                
                <Calling>
                <a href="tel:+123456789">Click To Call</a>
                </Calling>
+
+               </Box>
 
                 </Wrapper> 
                

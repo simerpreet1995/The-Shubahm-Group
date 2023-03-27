@@ -51,12 +51,12 @@ const openDialog = () => {
                     </li> <li>
                         <NavLink className={"navbar-link"} to={'/team'}>Team</NavLink>
                     </li> <li>
-                        <NavLink className={"navbar-link"} to={'/masterpiece'}>Our Masterpiece</NavLink>
+                        <NavLink className={"navbar-link"} to={'/masterpiece'}>Masterpiece</NavLink>
                     </li> <li>
-                        <NavLink className={"navbar-link"} to={'/join-us'}>Join US</NavLink>
+                        <NavLink className={"navbar-link"} to={'/join-us'}>Join</NavLink>
                     </li> 
                     <li>
-                        <NavLink style={{border: "none", textDecoration: "none", color: "rgb(150, 60, 60)"}} onClick={()=> openDialog()}  >Contact US</NavLink>
+                        <NavLink style={{border: "none", textDecoration: "none", color: "rgb(150, 60, 60)"}} onClick={()=> openDialog()}  >Contact</NavLink>
                     </li>
 
                     {/* <li>

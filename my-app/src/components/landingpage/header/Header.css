@@ -16,6 +16,7 @@
     justify-content: flex-end;
     margin: 0 6px;
     gap: 15px;
+    font-size: 12px;
 }
 
 .navbars .active {
@@ -37,3 +38,5 @@
     color: rgb(150, 60, 60);
 
 }
+
+

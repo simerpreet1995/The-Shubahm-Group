@@ -9,6 +9,7 @@ import ContactUs from './components/landingpage/header/ContactUs';
 import Blogs from './components/landingpage/header/Blogs';
 import Header from './components/landingpage/header/Header';
 import styled from '@emotion/styled';
+import Footer from './components/landingpage/footer/Footer';
 
 
 
@@ -33,7 +34,7 @@ function App() {
             <Route path='/blogs' element={<Blogs/>}></Route>
          </Routes>
      
-
+    <Footer/>
 
     </div>
   );

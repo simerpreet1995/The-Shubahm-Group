@@ -2,14 +2,13 @@ import Carousel from 'react-multi-carousel'
 import { bannerData } from '../../constants/data';
 import styled from '@emotion/styled';
 import 'react-multi-carousel/lib/styles.css';
-import { Box, Typography} from '@mui/material';
+import { Box, Grid, Typography} from '@mui/material';
 
 import BackgroundImg from "../../../images/background-video.mp4";
 import "./Home.css";
 import Logo from '../../../images/logo-the-shubham.png'
 import {cardData} from '../../constants/card'
 import { useState } from 'react';
-import LoginDialog from '../LoginDialog/LoginDialog';
 import CardContainer from './CardContainer';
 
 
@@ -19,7 +18,8 @@ import CardContainer from './CardContainer';
 
 const Image = styled('img')({
   width: '100%',
-  height: '88vh'
+  height: '92vh',
+  marginTop: 4
 
 })
 
@@ -50,14 +50,6 @@ const responsive = {
 
 function Home() {
 
-
-// for form on click dialog
-const [open,setOpen] = useState(false)
-
-const openDialog = () => {
-  setOpen(true);
-}
-
   return (
     <Box className="main-container">
 
@@ -70,7 +62,7 @@ const openDialog = () => {
         autoPlay={true}
         keyBoardControl={true}
         autoPlaySpeed={3000}
-        customTransition="all .2"
+        customTransition="all .1"
         transitionDuration={500}
         slidesToSlide={1}
         dotListClass="custom-dot-list-style"
@@ -97,24 +89,29 @@ const openDialog = () => {
 
 
       <Box className="main">
+            <Grid container>
 
+            <Grid item xs={12} md={8} >
       <Box className="video-text">
             
-            <Typography variant='h4'>At Omaxe, we envision creating a better tomorrow for India, and in order to turn that vision into reality, we have worked relentlessly since 1987 to provide world-class real estate services for people.</Typography>
+            <Typography variant='h6'>At Omaxe, we envision creating a better tomorrow for India, and in order to turn that vision into reality, we have worked relentlessly since 1987 to provide world-class real estate services for people.</Typography>
 
             <Typography>The brand ‘Omaxe’ was founded in 1987 by visionary first-generation entrepreneur & civil engineer Mr. Rohtas Goel to undertake construction and contracting business. Subsequently, the company diversified into the real estate sector in 2001 and got listed on both stock exchanges (BSE and NSE) in 2007.</Typography>
           </Box>
+          </Grid>
+
+
+            <Grid item xs={12} md={4}>
         <Box className="video-bg">
           <video src={BackgroundImg} autoPlay loop muted />
 
-          
-        </Box>
+           </Box>
+           </Grid>
+       
 
-        {/* <Box className="logo">
-          <img src={Logo} alt="logo" />
-        </Box> */}
-
+        </Grid>
       </Box>
+      
             {/* video ends here */}
       
 
@@ -122,7 +119,7 @@ const openDialog = () => {
 
 
             <Box className="hot-selling-project">
-              <Typography variant='h2'>HOT SELLING PROJECTS</Typography>
+              <Typography variant='h4'>HOT SELLING PROJECTS</Typography>
 
               </Box>
             <Box className="card-container">
