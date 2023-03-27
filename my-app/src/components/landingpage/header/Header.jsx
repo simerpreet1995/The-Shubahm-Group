@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
-import {AppBar, Toolbar, Typography, Box} from '@mui/material'
-import { NavLink } from 'react-router-dom'
+import {AppBar, Toolbar, Typography, Box, Button} from '@mui/material'
+import { Link, NavLink } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
+import LoginDialog from '../LoginDialog/LoginDialog';
+import { styled } from '@mui/system';
+
+
+const ContactButtonWrapper = styled(Box)`
+
+    & button {
+        text-decoration: none;
+        color: rgb(150, 60, 60);
+        padding: 0;
+        font-weight: 800;
+    }
+
+`
+
 
 function Header() {
+    
+
+    const [open,setOpen] = useState(false)
+
+const openDialog = () => {
+  setOpen(true);
+}
+//  for login pop up dialog
+
   return (
     <div className="container">
         
@@ -30,14 +54,27 @@ function Header() {
                         <NavLink className={"navbar-link"} to={'/masterpiece'}>Our Masterpiece</NavLink>
                     </li> <li>
                         <NavLink className={"navbar-link"} to={'/join-us'}>Join US</NavLink>
-                    </li> <li>
+                    </li> 
+                    {/* <li>
                         <NavLink className={"navbar-link"} to={'/contact'}>Contact US</NavLink>
+                    </li> */}
+
+                    <li>
+
+                    <ContactButtonWrapper>        
+                    <Button onClick={()=> openDialog()} >Contact</Button>
+                    </ContactButtonWrapper>
                     </li>
+
                     <li>
                         <NavLink className={"navbar-link"} to={'/blogs'}>Blogs</NavLink>
+                        
                     </li>
                 </ul>
             </Box>
+
+            <LoginDialog open={open} setOpen={setOpen}/>
+
 
         </Toolbar>
         </AppBar>

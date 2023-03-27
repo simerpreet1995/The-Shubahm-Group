@@ -2,12 +2,15 @@ import Carousel from 'react-multi-carousel'
 import { bannerData } from '../../constants/data';
 import styled from '@emotion/styled';
 import 'react-multi-carousel/lib/styles.css';
-import { Box, Typography, CardMedia, CardContent, CardActionArea, Card, Dialog } from '@mui/material';
+import { Box, Typography} from '@mui/material';
 
 import BackgroundImg from "../../../images/background-video.mp4";
 import "./Home.css";
 import Logo from '../../../images/logo-the-shubham.png'
 import {cardData} from '../../constants/card'
+import { useState } from 'react';
+import LoginDialog from '../LoginDialog/LoginDialog';
+import CardContainer from './CardContainer';
 
 
 
@@ -46,6 +49,14 @@ const responsive = {
 
 
 function Home() {
+
+
+// for form on click dialog
+const [open,setOpen] = useState(false)
+
+const openDialog = () => {
+  setOpen(true);
+}
 
   return (
     <Box className="main-container">
@@ -119,28 +130,16 @@ function Home() {
 
 {
                 cardData.map((data, idx) =>(
-                  <Box key={idx} className="card-wrapper">
+                
+                  
+                  <CardContainer url={data.url} heading={data.heading} area={data.area} type={data.type} price={data.price} ready={data.ready} button={data.button}/>
 
-                    <CardImage src={data.url} alt="banner image" />
-                    <Box className="typography-wrapper">
-
-                      <Box className="card-heading">
-                    <Typography variant='h5'>{data.heading}</Typography>
-                    </Box>
-
-                    <Typography variant='h6'>{data.area}</Typography>
-                    <Typography>{data.type}</Typography>
-                    <Typography>{data.price}</Typography>
-                    <Typography>{data.ready}</Typography>
-                    <button>{data.button}</button>
-                    </Box>
-                    {/* card wrapper ends here */}
-                    </Box>
                 ))
             }
-</Box>
-{/* card container end here */}
 
+
+                  </Box>
+                  {/* card container end here */}
 
 
 

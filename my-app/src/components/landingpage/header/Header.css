@@ -20,19 +20,20 @@
 
 .navbars .active {
     /* background-color: red; */
-    border-bottom: 5px solid yellow;
-    color: violet;
+    border-bottom: 3px solid yellow;
+    /* color: violet; */
 }
 
 .navbars li {
     list-style: none;
 }
 
-.navbars li :hover{
+/* .navbars li :hover{
     background-color: #fff;
-}
+} */
 
 .navbar-link{
     text-decoration: none;
     color: rgb(150, 60, 60);
+
 }

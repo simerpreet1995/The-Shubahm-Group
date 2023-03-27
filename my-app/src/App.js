@@ -14,11 +14,14 @@ import styled from '@emotion/styled';
 
 
 function App() {
+
+ 
   return (
     <div className="App">
       <header style={{border: "3px solid gray", marginTop: "60px",
    }}>
         <Header />
+
       </header>
         <Routes>
             <Route path='/' element={<Home/>}></Route>
