@@ -132,7 +132,7 @@ const openDialog = () => {
                 cardData.map((data, idx) =>(
                 
                   
-                  <CardContainer url={data.url} heading={data.heading} area={data.area} type={data.type} price={data.price} ready={data.ready} button={data.button}/>
+                  <CardContainer key={idx} url={data.url} heading={data.heading} area={data.area} type={data.type} price={data.price} ready={data.ready} button={data.button}/>
 
                 ))
             }

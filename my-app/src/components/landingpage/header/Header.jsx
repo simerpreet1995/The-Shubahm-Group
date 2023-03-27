@@ -55,16 +55,16 @@ const openDialog = () => {
                     </li> <li>
                         <NavLink className={"navbar-link"} to={'/join-us'}>Join US</NavLink>
                     </li> 
-                    {/* <li>
-                        <NavLink className={"navbar-link"} to={'/contact'}>Contact US</NavLink>
-                    </li> */}
-
                     <li>
+                        <NavLink style={{border: "none", textDecoration: "none", color: "rgb(150, 60, 60)"}} onClick={()=> openDialog()}  >Contact US</NavLink>
+                    </li>
+
+                    {/* <li>
 
                     <ContactButtonWrapper>        
                     <Button onClick={()=> openDialog()} >Contact</Button>
                     </ContactButtonWrapper>
-                    </li>
+                    </li> */}
 
                     <li>
                         <NavLink className={"navbar-link"} to={'/blogs'}>Blogs</NavLink>

@@ -28,7 +28,7 @@ const CardDetails = styled(Box)`
     }
 `
 
-const KnowButton = styled(Button)`
+const KnowButton = styled(Box)`
     display: flex;
     justify-content: center;
     width: 100%;
@@ -57,7 +57,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function CardContainer({url, heading, area, type, price, ready, button }) {
+export default function CardContainer({url, heading, area, type, price, ready, button}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -74,7 +74,7 @@ export default function CardContainer({url, heading, area, type, price, ready, b
 
   return (
     <Box>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
