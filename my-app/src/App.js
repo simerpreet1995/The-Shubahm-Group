@@ -8,7 +8,6 @@ import JoinUs from './components/landingpage/header/JoinUs';
 import ContactUs from './components/landingpage/header/ContactUs';
 import Blogs from './components/landingpage/header/Blogs';
 import Header from './components/landingpage/header/Header';
-import styled from '@emotion/styled';
 import Footer from './components/landingpage/footer/Footer';
 
 

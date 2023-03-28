@@ -1,22 +1,11 @@
 import React, { useState } from 'react'
 import './Header.css'
-import {AppBar, Toolbar, Typography, Box, Button} from '@mui/material'
-import { Link, NavLink } from 'react-router-dom'
-import MenuIcon from '@mui/icons-material/Menu';
+import {AppBar, Toolbar, Typography, Box} from '@mui/material'
+import { NavLink } from 'react-router-dom'
 import LoginDialog from '../LoginDialog/LoginDialog';
-import { styled } from '@mui/system';
 
 
-const ContactButtonWrapper = styled(Box)`
 
-    & button {
-        text-decoration: none;
-        color: rgb(150, 60, 60);
-        padding: 0;
-        font-weight: 800;
-    }
-
-`
 
 
 function Header() {
@@ -59,12 +48,6 @@ const openDialog = () => {
                         <NavLink style={{border: "none", textDecoration: "none", color: "rgb(150, 60, 60)"}} onClick={()=> openDialog()}  >Contact</NavLink>
                     </li>
 
-                    {/* <li>
-
-                    <ContactButtonWrapper>        
-                    <Button onClick={()=> openDialog()} >Contact</Button>
-                    </ContactButtonWrapper>
-                    </li> */}
 
                     <li>
                         <NavLink className={"navbar-link"} to={'/blogs'}>Blogs</NavLink>
